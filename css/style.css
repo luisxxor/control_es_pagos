@@ -22,4 +22,41 @@ body{
 	line-height: .3em;
 }
 
+#banner{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
 
+#menuitems{
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	margin-left: 2em;
+}
+
+#menuitems li{
+	padding: 0 .2em;
+}
+
+#menuitems > li > a{
+	text-decoration: none;
+	color: #353535;
+	padding: .5em;
+}
+
+#menuitems > li > a.active,
+#menuitems > li:hover > a{
+	transition: all .5s ease;
+	color: #00B1EA;
+	border-bottom: 4px solid #00B1EA;
+}
+
+#containerloginbutton{
+	padding: .5em;
+	margin-left: auto;
+}
+
+@media(min-width: 768px){
+
+}

@@ -4,7 +4,7 @@
 	</a> 
 	
 
-	<div class="navcontent d-none d-lg-flex" id="navbarCollapsibleItems">
+	<div class="navcontent" id="navbarCollapsibleItems">
 		
 		<?PHP if($userIsLogged): ?>
 			<nav id="menuitems">

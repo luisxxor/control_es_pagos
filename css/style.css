@@ -62,12 +62,14 @@ body{
     align-items: center;
     width: 100%;
     width: -webkit-fill-available;
+    flex-direction: row;
 }
 
 #containerloginbutton,
 #containerlogoutbutton{
 	padding: .5em;
 	margin-left: auto;
+	order: 1;
 }
 
 #togglenavitems{
@@ -87,9 +89,43 @@ body{
 #containerloginbutton > button:focus,
 #containerlogoutbutton > button:focus{
     outline: none;
-    box-shadow: none
+    box-shadow: none;
 }
 
-@media(min-width: 768px){
+@media(max-width: 996px){
+	#navbarCollapsibleItems{
+		display: none;
+		order: 1;
+		flex: 1 0 100%;
+		flex-wrap: wrap;
+		margin-bottom: .5em;
+	}
 
+	#navbarCollapsibleItems button,
+	#menuitems{
+		width: 100%;
+		width: -webkit-fill-available;
+	}
+
+	#banner{
+		flex-wrap: wrap;
+	}
+
+	#containerloginbutton,
+	#containerlogoutbutton{
+		order:-1;
+		padding: 0;
+		margin: 0;
+		flex: 1 0 100%;
+	}
+
+	#menuitems > ul{
+		padding: 0;
+		flex-wrap: wrap;
+	}
+
+	#menuitems > ul > li {
+		padding: 0;
+    	flex: 1 0 100%;
+	}
 }

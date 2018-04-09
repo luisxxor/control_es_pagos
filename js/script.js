@@ -25,4 +25,16 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	$("#togglenavitems").click(function(){
+		let items = $("#navbarCollapsibleItems");
+
+		if(items.css('display') == 'none'){
+			items.show('400').css('display','flex');
+		}
+		else
+		{
+			items.hide('400');
+		}
+	})
 });

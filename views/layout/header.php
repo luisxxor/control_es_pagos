@@ -6,7 +6,7 @@
 	<?PHP if($userIsLogged): ?>
 		<nav id="menuitems">
 			<li>
-				<a href="index.php?goto=proveedores">Proveedores</a>
+				<a href="index.php?action=list&table=proveedores">Proveedores</a>
 			</li>
 		</nav>
 	<?PHP endif;

@@ -21,6 +21,8 @@
 		$userIsLogged = trim($_SESSION["username"]) != "";
 	}
 
+	require_once('route/phpgrid_render_route.php');
+
 	require_once('views/layout/layout.php');
 
 	/*

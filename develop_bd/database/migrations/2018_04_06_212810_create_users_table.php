@@ -18,6 +18,21 @@ class CreateUsersTable extends Migration
             $table->string('username');
             $table->string('password');
         });
+
+        Schema::create('proveedores',function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('nombre')->nullable();
+            $table->string('razon_social')->nullable();
+            $table->string('email')->nullable();
+            $table->string('telefono1')->nullable();
+            $table->string('telefono2')->nullable();
+            $table->string('celular')->nullable();
+            $table->string('contacto')->nullable();
+            $table->string('direccion')->nullable();
+            $table->string('descripcion')->nullable();
+            $table->string('otros')->nullable();
+            $table->boolean('estado');
+        });
     }
 
     /**
@@ -28,5 +43,6 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+        Schema::dropIfExists('proveedores');
     }
 }

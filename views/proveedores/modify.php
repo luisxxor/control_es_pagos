@@ -1,0 +1,1 @@
+<h1 class="text-center text-light">Modificar Proveedor #<?= $_GET['id']; ?></h1>

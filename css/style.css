@@ -32,34 +32,45 @@ body{
 	align-items: center;
 }
 
-#menuitems{
+#menuitems > ul{
 	list-style-type: none;
 	display: flex;
 	align-items: center;
-	margin-left: 2em;
+	margin: inherit;
 }
 
-#menuitems li{
+#menuitems > ul > li{
 	padding: 0 .2em;
 }
 
-#menuitems > li > a{
+#menuitems > ul > li > button{
 	text-decoration: none;
 	color: #353535;
 	padding: .5em;
 	font-weight: bolder;
 }
 
-#menuitems > li > a.active,
-#menuitems > li:hover > a{
+#menuitems > ul > li > button.active,
+#menuitems > ul > li:hover > button{
 	transition: all .5s ease;
 	color: #00B1EA;
 	border-bottom: 4px solid #00B1EA;
 }
 
+#navbarCollapsibleItems{
+	display: flex;
+    align-items: center;
+    width: 100%;
+    width: -webkit-fill-available;
+}
+
 #containerloginbutton,
 #containerlogoutbutton{
 	padding: .5em;
+	margin-left: auto;
+}
+
+#togglenavitems{
 	margin-left: auto;
 }
 

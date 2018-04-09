@@ -6,7 +6,7 @@
 		{
 			if($_GET['table'] == 'proveedores')
 			{
-				require('datatables/proveedores.php');
+				require('phpgrid/proveedores.php');
 			}
 		}
 	}

@@ -13,11 +13,11 @@ class UserSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert(
-        	["username" => "luisxxor","password" => bcrypt("1234")]
+        	["username" => "luisxxor","password" => hash("sha256","1234")]
         );
 
         DB::table('users')->insert(
-        	["username" => "andre","password" => bcrypt("1234")]
+        	["username" => "andre","password" => hash("sha256","1234")]
         );
     }
 }

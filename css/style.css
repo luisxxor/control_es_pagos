@@ -1,16 +1,14 @@
 body{
-	background-color: #E7ECEF;
+	background-color: #00B1EA;
 	color: #353535;
 	height: 100vh;
+	font-size: 16px;
+	display: flex;
+	flex-direction: column;
 }
 
 #menu{
 	background-color: #F8F8F8;
-}
-
-body{
-	display: flex;
-	flex-direction: column;
 }
 
 #main{
@@ -19,7 +17,13 @@ body{
 
 #footer{
 	background-color: #353535;
-	line-height: .3em;
+	line-height: .1em;
+	font-size: .7em;
+}
+
+#footer > .container{
+	display: flex;
+	justify-content: space-around;
 }
 
 #banner{
@@ -43,6 +47,7 @@ body{
 	text-decoration: none;
 	color: #353535;
 	padding: .5em;
+	font-weight: bolder;
 }
 
 #menuitems > li > a.active,
@@ -55,6 +60,16 @@ body{
 #containerloginbutton{
 	padding: .5em;
 	margin-left: auto;
+}
+
+#containerloginbutton > button{
+	background-color: #00B1EA;
+	border-color: #00B1EA;
+}
+
+#containerloginbutton > button:focus{
+    outline: none;
+    box-shadow: none
 }
 
 @media(min-width: 768px){

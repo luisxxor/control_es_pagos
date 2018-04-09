@@ -14,10 +14,11 @@
 		FROOT es una constante que contiene la ruta absoluta del directorio raiz de la aplicación pero en el formato del sistema de archivos del sistema operativo, necesario para incluir scripts en PHP.
 	*/
 
+	session_start();
 	$userIsLogged = false;
 	
-	if(isset($_SESSION["usuario"])){
-		$userIsLogged = trim($_SESSION["usuario"]) != "";
+	if(isset($_SESSION["username"])){
+		$userIsLogged = trim($_SESSION["username"]) != "";
 	}
 
 	require_once('views/layout/layout.php');

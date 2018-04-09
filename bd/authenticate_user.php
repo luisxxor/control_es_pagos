@@ -13,13 +13,15 @@
 
 	require_once('disconnect.php');
 
-	if(!$row)
+	if($row)
 	{
-		echo "0";
+		session_start();
+		$_SESSION["username"] = $user;
+		echo "1";
 	}
 	else
 	{
-		echo "1";
+		echo "0";
 	}
-	
+
 ?>

@@ -3,10 +3,25 @@ $(document).ready(function(){
 	$("#submitlogin").click(function(){	
 		$.ajax({
 			type: "POST",
-			url: "bd/check_login.php",
+			url: "bd/authenticate_user.php",
 			data: {user: $("#userlogin").val(), password: $("#passwordlogin").val()},
-			success: function (data){
-				data == "1" ? console.log("Nombre de usuario correcto") : console.log("Nombre de usuario incorrecto");
+			success: function(data){
+				if(data == "1"){
+					$("#loginerror").hide();
+					window.location.reload();
+				}else{
+					$("#loginerror").show();
+				}
+			}
+		});
+	});
+
+	$("#containerlogoutbutton > button").click(function(){
+		$.ajax({
+			type: "POST",
+			url: "bd/logout_user.php",
+			success: function(){
+				window.location.reload();
 			}
 		});
 	});

@@ -93,5 +93,21 @@ $(document).ready(function(){
 		});
 	});
 
-
+	$("#buttonDeleteProveedor").click(function(){
+		$.ajax({
+			type: "POST",
+			url: "bd/proveedores/delete.php",
+			data: {
+				id: $("#proveedorId").val()
+			},
+			success: function(data){
+				if(data == "1"){
+					alert("registro eliminado correctamente");
+					window.location.href = "index.php?action=list&table=proveedores";
+				}else{
+					alert("error al eliminar el proveedor");
+				}
+			}
+		});
+	});
 });

@@ -5,34 +5,41 @@
 	}
 	else if(isset($_GET["action"]) and isset($_GET["table"]))
 	{
-		if($_GET["action"] == "list")
+		if($userIsLogged)
 		{
-			if($_GET["table"] == "proveedores")
+			if($_GET["action"] == "list")
 			{
-				require('views/proveedores/list.php');	
+				if($_GET["table"] == "proveedores")
+				{
+					require('views/proveedores/list.php');	
+				}
+				else
+				{
+					require('views/errors/404.php');
+				}
+			}
+			else if($_GET["action"] == "edit")
+			{
+				if($_GET["table"] == "proveedores")
+				{
+					require('views/proveedores/edit.php');
+				}
+			}
+			else if($_GET["action"] == "create")
+			{
+				if($_GET["table"] == "proveedores")
+				{
+					require('views/proveedores/create.php');
+				}			
 			}
 			else
 			{
 				require('views/errors/404.php');
 			}
 		}
-		else if($_GET["action"] == "edit")
-		{
-			if($_GET["table"] == "proveedores")
-			{
-				require('views/proveedores/edit.php');
-			}
-		}
-		else if($_GET["action"] == "create")
-		{
-			if($_GET["table"] == "proveedores")
-			{
-				require('views/proveedores/create.php');
-			}			
-		}
 		else
 		{
-			require('views/errors/404.php');
+			require('views/errors/403.php');
 		}
 	}
 	else

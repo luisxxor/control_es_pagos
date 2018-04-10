@@ -12,7 +12,7 @@
 	require(FROOT."bd/disconnect.php");
 ?>
 
-<h1 class="text-center text-light mt-4">Modificar Proveedor #<?= $_GET['id']; ?></h1>
+<h1 class="text-center text-light mt-4">Editar Proveedor #<?= $_GET['id']; ?></h1>
 
 <div class="jumbotron">
 	<form>
@@ -99,7 +99,10 @@
 
 	<input type="hidden" id="proveedorId" value="<?= $_GET['id'] ?>">
 	<div class="row">
-		<div class="col-12 col-sm-2 offset-md-5">
+		<div class="col-12 col-sm-2">
+			<button class="btn btn-block btn-danger" id="buttonDeleteProveedor">Borrar</button>
+		</div>
+		<div class="col-12 col-sm-2 offset-sm-8">
 			<button class="btn btn-block btn-primary" id="buttonUpdateProveedor">Guardar</button>
 		</div>
 	</div>

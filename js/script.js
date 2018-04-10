@@ -64,4 +64,34 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	$("#buttonUpdateProveedor").click(function(){
+		$.ajax({
+			type: "POST",
+			url: "bd/proveedores/update.php",
+			data: {
+				nombre: $("#proveedorNombre").val(),
+				razonsocial: $("#proveedorRazonSocial").val(),
+				email: $("#proveedorEmail").val(),
+				telefono1: $("#proveedorTelefono1").val(),
+				telefono2: $("#proveedorTelefono2").val(),
+				celular: $("#proveedorCelular").val(),
+				contacto: $("#proveedorContacto").val(),
+				direccion: $("#proveedorDireccion").val(),
+				otro: $("#proveedorOtro").val(),
+				estado: $("#proveedorEstado").val(),
+				id: $("#proveedorId").val()
+			},
+			success: function(data){
+				if(data == "1"){
+					alert("registro actualizado correctamente");
+					window.location.href = "index.php?action=list&table=proveedores";
+				}else{
+					alert("error al actualizar el proveedor");
+				}
+			}
+		});
+	});
+
+
 });

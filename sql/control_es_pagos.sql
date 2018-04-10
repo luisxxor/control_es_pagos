@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-04-2018 a las 15:05:08
+-- Tiempo de generación: 10-04-2018 a las 03:31:23
 -- Versión del servidor: 10.1.29-MariaDB
 -- Versión de PHP: 7.2.0
 
@@ -45,6 +45,35 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `proveedores`
+--
+
+CREATE TABLE IF NOT EXISTS `proveedores` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `razon_social` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `telefono1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `telefono2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `celular` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contacto` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `direccion` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `descripcion` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `otro` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `estado` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `proveedores`
+--
+
+INSERT INTO `proveedores` (`id`, `nombre`, `razon_social`, `email`, `telefono1`, `telefono2`, `celular`, `contacto`, `direccion`, `descripcion`, `otro`, `estado`) VALUES
+(1, 'Movistar', 'Telefónica Móviles Chile S.A', 'soporte@movistar.cl', '600-600-3000', NULL, NULL, NULL, 'Carlos Ossandón 1301 - Local 2 Barrio: Barrio Ossandon', 'Empresa de telefonía', NULL, 1);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `users`
 --
 
@@ -60,8 +89,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
-(1, 'luisxxor', '$2y$10$IhX.0lmjCghcTRq7TSDDQ.yxAUS/A9A0nr2eK1sYPb3AbmD6n/kq6'),
-(2, 'andre', '$2y$10$0KLD0EOpbWlfh0h0A311tupYEAsDzebl69G0kZ45J41XJ9K2AT0QK');
+(1, 'luisxxor', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4'),
+(2, 'andre', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -24,6 +24,7 @@ body{
 #footer > .container{
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 #banner{
@@ -92,6 +93,8 @@ body{
     box-shadow: none;
 }
 
+
+
 @media(max-width: 996px){
 	#navbarCollapsibleItems{
 		display: none;
@@ -127,5 +130,9 @@ body{
 	#menuitems > ul > li {
 		padding: 0;
     	flex: 1 0 100%;
+	}
+
+	#footer > div.container > p {
+		flex: 1 0 100%;
 	}
 }

@@ -56,7 +56,8 @@
 	$col["title"] = "Telefono 2";
 	$col["name"] = "telefono2";
 	$col["width"] = "3";
-	$col["editable"] = false; 
+	$col["editable"] = false;
+	$col["visible"] = "sm+"; 
 	$cols[] = $col;
 
 	$col = array();
@@ -64,6 +65,7 @@
 	$col["name"] = "celular";
 	$col["width"] = "3";
 	$col["editable"] = false; 
+	$col["visible"] = "sm+";
 	$cols[] = $col;
 
 	/*$col = array();
@@ -78,6 +80,7 @@
 	$col["name"] = "direccion";
 	$col["width"] = "5";
 	$col["editable"] = false; 
+	$col["visible"] = "sm+";
 	$cols[] = $col;
 
 	$col = array();
@@ -85,6 +88,7 @@
 	$col["name"] = "otros";
 	$col["width"] = "5";
 	$col["editable"] = false; 
+	$col["visible"] = "sm+";
 	$cols[] = $col;												
 		
 

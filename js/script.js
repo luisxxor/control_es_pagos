@@ -21,7 +21,7 @@ $(document).ready(function(){
 			type: "POST",
 			url: "bd/user/logout.php",
 			success: function(){
-				window.location.reload();
+				window.location.href = "index.php";
 			}
 		});
 	});

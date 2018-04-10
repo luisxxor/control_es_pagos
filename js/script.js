@@ -37,4 +37,31 @@ $(document).ready(function(){
 			items.hide('400');
 		}
 	})
+
+	$("#buttonSaveProveedor").click(function(){
+		$.ajax({
+			type: "POST",
+			url: "bd/proveedores/insert.php",
+			data: {
+				nombre: $("#proveedorNombre").val(),
+				razonsocial: $("#proveedorRazonSocial").val(),
+				email: $("#proveedorEmail").val(),
+				telefono1: $("#proveedorTelefono1").val(),
+				telefono2: $("#proveedorTelefono2").val(),
+				celular: $("#proveedorCelular").val(),
+				contacto: $("#proveedorContacto").val(),
+				direccion: $("#proveedorDireccion").val(),
+				otro: $("#proveedorOtro").val(),
+				estado: $("#proveedorEstado").val()
+			},
+			success: function(data){
+				if(data == "1"){
+					alert("registro exitoso");
+					window.location.href = "index.php?action=list&table=proveedores";
+				}else{
+					alert("error al registrar el proveedor");
+				}
+			}
+		});
+	});
 });

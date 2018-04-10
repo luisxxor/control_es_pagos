@@ -20,7 +20,7 @@
 	$col["name"] = "id";
 	$col["width"] = "1";
 	$col["editable"] = false;
-	$col["link"] = "index.php?action=modify&table=proveedores&id={id}";
+	$col["link"] = "index.php?action=edit&table=proveedores&id={id}";
 	$col["linkoptions"] = "target='_self'   style='color:#2ca9d8;text-decoration: underline'"; 
 	$cols[] = $col;		
 

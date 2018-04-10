@@ -30,7 +30,7 @@ class CreateUsersTable extends Migration
             $table->string('contacto')->nullable();
             $table->string('direccion')->nullable();
             $table->string('descripcion')->nullable();
-            $table->string('otros')->nullable();
+            $table->string('otro')->nullable();
             $table->boolean('estado');
         });
     }

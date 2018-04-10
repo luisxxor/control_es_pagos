@@ -16,12 +16,19 @@
 				require('views/errors/404.php');
 			}
 		}
-		else if($_GET["action"] == "modify")
+		else if($_GET["action"] == "edit")
 		{
 			if($_GET["table"] == "proveedores")
 			{
-				require('views/proveedores/modify.php');
+				require('views/proveedores/edit.php');
 			}
+		}
+		else if($_GET["action"] == "create")
+		{
+			if($_GET["table"] == "proveedores")
+			{
+				require('views/proveedores/create.php');
+			}			
 		}
 		else
 		{
